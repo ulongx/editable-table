@@ -25,7 +25,7 @@ numeric-input-1.2.js
 哪一列是汇总列，还有汇总的计算方式  type * 相乘 + 相加 - 相减
 如图：
 
-![screenshots_1]()
+![screenshots_1](https://github.com/ulongx/editable-table/blob/master/screenshots_1.gif?raw=true)
 
 Dependencies
 ------------
