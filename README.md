@@ -1,4 +1,4 @@
-editable-table
+editable-table 扩展
 =================
 
 This tiny (3KB, < 120 lines) jQuery plugin turns any table into an editable spreadsheet. Here are the key features:
@@ -19,6 +19,13 @@ Basic Usage
 -----------
 
 See http://mindmup.github.com/editable-table/
+
+numeric-input-1.2.js
+这是一个对 editableTableWidget 的一个小扩展，可以定义表格哪几列需要修改，
+哪一列是汇总列，还有汇总的计算方式  type * 相乘 + 相加 - 相减
+如图：
+
+![screenshots_1]()
 
 Dependencies
 ------------
