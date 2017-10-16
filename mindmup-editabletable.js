@@ -14,6 +14,11 @@ $.fn.editableTableWidget = function (options) {
 			active,
 			showEditor = function (select) {
 				active = element.find('td:focus');
+				if (activeOptions.needEdits.length > 0){
+          if ($.inArray($(active).index(),activeOptions.needEdits) === -1){
+          	return;
+					}
+				}
 				if (active.length) {
 					editor.val(active.text())
 						.removeClass('error')
@@ -126,6 +131,6 @@ $.fn.editableTableWidget.defaultOptions = {
 	cloneProperties: ['padding', 'padding-top', 'padding-bottom', 'padding-left', 'padding-right',
 					  'text-align', 'font', 'font-size', 'font-family', 'font-weight',
 					  'border', 'border-top', 'border-bottom', 'border-left', 'border-right'],
-	editor: $('<input>')
+	editor: $('<input>'),
+	needEdits: []
 };
-
