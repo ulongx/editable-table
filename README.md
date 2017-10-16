@@ -73,7 +73,7 @@ $('#editMainTable').editableTableWidget().numericInput({
 
 * 设置不可以修改的列
 
-
+![sreenhots_2](https://github.com/ulongx/editable-table/blob/master/screenshots_2.gif?raw=true)
 ``` javascript
 $('#editMainTable').editableTableWidget({
   needEdits: [3,4]
