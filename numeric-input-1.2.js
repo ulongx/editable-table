@@ -6,19 +6,6 @@ numeric-input-1.2.js
 (function () {
     "use strict";
 
-		/**
-		 * Array.prototype.[method name] allows you to define/overwrite an objects method
-		 * needle is the item you are searching for
-		 * this is a special variable that refers to "this" instance of an Array.
-		 * returns true if needle is in the array, and false otherwise
-		 */
-		Array.prototype.contains = function ( needle ) {
-		    for (var i in this) {
-		        if (this[i] == needle) return true;
-		    }
-		    return false;
-		};
-
     $.fn.numericInput = function (options) {
         //type * 相乘 + 相加 - 相减
         var defaults = {
@@ -68,12 +55,11 @@ numeric-input-1.2.js
                 total = 0,
                 totalSum = 0,
                 totalSumEnd = 0;
-            if (options.columns.length && !options.columns.contains(column)) {
+            if (options.columns.length && $.inArray(column,options.columns) === -1) {
                 //$.Message.info('本单元不可编辑');
 								alert('本单元不可编辑');
                 return false;
             }
-            console.log(column);
             if (options.columns.length && options.totalColIndex !== -1){
                 var parentTr = cell.parent().children();
                 options.columns.map(function (item, i) {
