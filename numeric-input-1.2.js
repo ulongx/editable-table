@@ -92,9 +92,11 @@ numeric-input-1.2.js
                     totalSumEnd += parseFloat(row.children().eq(options.totalColIndex).text());
                 }
             });
-            footer.children().eq(column).text(total);
+            // footer.children().eq(column).text(total);
             if (options.totalColIndex !== -1) {
                 footer.children().eq(options.totalColIndex).text(totalSumEnd);
+            }else{
+                footer.children().eq(column).text(total);
             }
 
         }).on('validate', function (evt, value) {
